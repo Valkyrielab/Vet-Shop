@@ -16,3 +16,9 @@ header img{
     height: 50px;
     vertical-align: middle;
 }
+
+.nav-main{
+    background-color: #56da5a;
+    overflow: hidden;
+    
+}
