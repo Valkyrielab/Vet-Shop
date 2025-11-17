@@ -1,33 +1,22 @@
 document.getElementById('loginForm').addEventListener('submit', function(e) {
     e.preventDefault();
 
-    const username = document.getElementById('username').value;
-    const password = document.getElementById('password').value;
+    const username = document.getElementById('username').value.trim();
+    const password = document.getElementById('password').value.trim();
+    const role = document.getElementById('role').value;
     const errorMessage = document.getElementById('error-message');
 
     // Hardcoded credentials for demo
-    const adminUser = "admin";
-    const adminPass = "admin123";
+    const adminUser = { username: "admin", password: "admin123" };
+    const normalUser = { username: "user", password: "user123" };
 
-    if (username === adminUser && password === adminPass) {
-        alert("Login successful!");
-        window.location.href = "admin-dashboard.html"; // Redirect to admin dashboard
+    if (role === "admin" && username === adminUser.username && password === adminUser.password) {
+        alert("Admin login successful!");
+        window.location.href = "admin-dashboard.html";
+    } else if (role === "user" && username === normalUser.username && password === normalUser.password) {
+        alert("User login successful!");
+        window.location.href = "user-dashboard.html";
     } else {
-        errorMessage.textContent = "Invalid username or password!";
+        errorMessage.textContent = "Invalid credentials or role!";
     }
 });
-
-document.getElementById('showPassword').addEventListener('change', function() {
-    const passwordField = document.getElementById('password');  
-    if (this.checked) {
-        passwordField.type = "text";
-    } else {
-        passwordField.type = "password";
-    }   
-});
-
-document.getElementById('forgotPassword').addEventListener('click', function(e) {
-    e.preventDefault();
-    alert("Password recovery is not implemented in this demo.");
-});
-

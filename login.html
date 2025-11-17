@@ -1,23 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Admin Login</title>
-<link rel="stylesheet" href="login.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="login.css" />
 </head>
 <body>
-<div class="login-container">
-    <h2>Admin Login</h2>
-    <form id="loginForm">
-        <input type="text" id="username" placeholder="Username" required>
-        <input type="password" id="password" placeholder="Password" required>
-        <button type="submit">Login</button>
-        
-    </form>
-    <p id="error-message" style="color:red;"></p>
+    <div class="login-box">
+        <h2>Login</h2>
+        <form id="loginForm">
+            <label for="username"> Username </label>
+            <input type="text" id="username" placeholder="Username" required>
+            <br>
+            <label for="password">Password</label>
+            <input type="password" id="password" placeholder="Password" required>
 
-</div>
-<script> script.js</script>
+            <select id="role" required>
+                <option value="">Select Role</option>
+                <option value="admin">Admin</option>
+                <option value="user">User</option>
+
+            </select>
+            <button type="submit">Login</button>
+        </form>
+
+
+            <p id="error-message"></p>
+    </div>
+    <P>if do not have a account pliese <a>  regester </a>here!</P>
+    <script src="login.js"></script>
 </body>
 </html>
