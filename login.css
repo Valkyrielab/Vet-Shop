@@ -10,3 +10,18 @@ form{
     background-attachment: fixed;
     background-color: #18c35c;
 }
+
+label{
+
+}
+
+input{
+    background-color: #18c35c;
+    border-color: darkgreen;
+    box-shadow: inset;
+    text-decoration: none;
+}
+
+button{
+    
+}
