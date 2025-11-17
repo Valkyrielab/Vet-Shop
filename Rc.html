@@ -26,24 +26,53 @@
                 <button class="tab-link" onclick="openTab(montego.html)"><a href="montego.html">Montego</a> |</button>
             </div>
         </Main>
+        <section class="admin-panel">
+  <h2>Admin Dashboard</h2>
+  
+  <!-- Add Product Form -->
+  <form id="add-product-form">
+    <h3>Add New Product</h3>
+    <input type="text" id="product-name" placeholder="Product Name" required>
+    <input type="number" id="product-price" placeholder="Price" required>
+    <input type="number" id="product-quantity" placeholder="Quantity" required>
+    <input type="text" id="product-image" placeholder="Image URL">
+    <button type="submit">Add Product</button>
+  </form>
+
+  <!-- Product List -->
+  <h3>Manage Products</h3>
+  <table id="admin-product-list">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Quantity</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Products will be dynamically added here -->
+    </tbody>
+  </table>
+</section>
         <main class = "centered-content">
             <h1>Royal Canin Dog Food</h1>
             <img src="images/RC.png" alt="Royal Canin" class="product-image" />
             <section class="shop">
-  <h2>Shop Our Products</h2>
-  <div class="product-grid">
-    <!-- Product Card -->
-    <div class="product-card">
-      <img src="images/product1.jpg" alt="Dog Food">
-    <h3>Dog Food</h3>
-      <p>Price: $25.00</p>
-      <label for="size">Size:</label>
-      <select id="size">
-        <option value="small">Small</option>
-        <option value="medium">Medium</option>
-        <option value="large">Large</option>
-      </select>
-      <button onclick="addToCart('Royal Canin Dog Food', 25)">Add to Cart</button>
+                <h2>Shop Our Products</h2>
+                <div class="product-grid">
+                    <!-- Product Card -->
+                    <div class="product-card">
+                        <img src="images/product1.jpg" alt="Dog Food">
+                        <h3>Dog Food</h3>
+                        <p>Price: $25.00</p>
+                    <label for="size">Size:</label>
+                    <select id="size">
+                    <option value="small">Small</option>
+                    <option value="medium">Medium</option>
+                    <option value="large">Large</option>
+            </select>
+                <button onclick="addToCart('Royal Canin Dog Food', 25)">Add to Cart</button>
     </div>
 
     <!-- Repeat for more products -->
