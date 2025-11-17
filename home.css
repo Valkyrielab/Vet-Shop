@@ -4,7 +4,7 @@ body{
     margin: 0;
     padding: 0;
     text-align: center;
-    background-image:image(images/logo.png);
+    background-image:url(image/logo.png);
     background-repeat: no-repeat;
     background-attachment: fixed;   
     background-position: center; 
