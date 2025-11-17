@@ -23,5 +23,7 @@ input{
 }
 
 button{
+    border-radius: 16px;
+    background-color: #18c35c;
     
 }
