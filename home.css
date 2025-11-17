@@ -21,6 +21,8 @@ header{
 header img{
     height: 50px;
     vertical-align: center;
+    margin-right: 10px;
+    align-items: middle;
 }
 
 .nav-main{
