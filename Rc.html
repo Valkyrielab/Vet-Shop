@@ -29,10 +29,39 @@
         <main class = "centered-content">
             <h1>Royal Canin Dog Food</h1>
             <img src="images/RC.png" alt="Royal Canin" class="product-image" />
-            <p>Royal Canin offers a variety of dog food formulas tailored to meet the specific needs of different breeds, sizes, and life stages. Their products are known for high-quality ingredients and nutritional balance.</p>
-            <h2>Popular Royal Canin Dog Food Products:</h2>
-            <h2>Where to Buy:</h2>
-            <p>You can purchase Royal Canin dog food at our clinic or through our online store. For more information on pricing and availability, please contact us directly.</p>
+            <section class="shop">
+  <h2>Shop Our Products</h2>
+  <div class="product-grid">
+    <!-- Product Card -->
+    <div class="product-card">
+      <img src="images/product1.jpg" alt="Dog Food">
+    <h3>Dog Food</h3>
+      <p>Price: $25.00</p>
+      <label for="size">Size:</label>
+      <select id="size">
+        <option value="small">Small</option>
+        <option value="medium">Medium</option>
+        <option value="large">Large</option>
+      </select>
+      <button onclick="addToCart('Royal Canin Dog Food', 25)">Add to Cart</button>
+    </div>
+
+    <!-- Repeat for more products -->
+    <div class="product-card">
+      <img src="imagesjpg>product2.jpg" alt="Durable Dog Leash">
+      <h3>Durable Dog Leash</h3>
+      <p>Price: $15.00</p>
+      <button onclick="addToCart('Durable Dog Leash', 15)">Add to Cart</button>
+    </div>
+  </div>
+
+  <!-- Cart Section -->
+  <div class="cart">
+    <h3>Your Cart</h3>
+    <ul id="cart-items"></ul>
+    <p>Total: $<span id="cart-total">0</span></p>
+  </div>
+</section>
 
         </main>
         <footer class="site-footer">
