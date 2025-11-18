@@ -1,0 +1,88 @@
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <title>dogfood</title>
+        <link rel="stylesheet" href="home.css" />
+        <link rel="stylesheet" href="dogfood.css" />
+        <script src="tab.js" defer></script>
+    </head>
+    <body>
+        <header class="site-header">
+            <img src="images/logo.png" alt="Womderboom Animal Clinic" class="logo" />
+            <nav class="nav-Main">
+                <a href="Home.html">Home</a> |
+                <a href="dogFood.html">Dog Food</a> |
+                <a href="CatFood.html">Cat Food</a> |
+                <a href="Other.html">Other</a> |
+                <button><a href="login.html">login </a></bUtton>
+            </nav>
+            
+        </header>
+        <Main class="top">
+            <div class="tab">
+                <button class="tab-link" onclick="openTab(RCF.html)">  <a href="RCf.html">Royal Canin</a> | </button> 
+                <button class="tab-link" onclick="openTab(hillsf.html)"> <a href="hillsf.html">Hills</a> | </button>
+                <button class="tab-link" onclick="openTab(upf.html)"><a href="upf.html">Ultra Pet</a> |</button>
+                <button class="tab-link" onclick="openTab(montegof.html)"><a href="montegof.html">Montego</a> |</button>
+            </div>
+        </Main>
+           <section class="admin-panel">
+            <h2>Admin Dashboard</h2>
+                <form id="add-product-form">
+                    <h3>Add New Product</h3>
+                        <input type="text" id="product-name" placeholder="Product Name" required>
+                        <input type="number" id="product-price" placeholder="Price" required>
+                        <input type="number" id="product-quantity" placeholder="Quantity" required>
+                        <input type="text" id="product-image" placeholder="Image URL">
+                        <button type="submit">Add Product</button>
+                </form>
+            <h3>Manage Products</h3>
+                <table id="admin-product-list">
+                <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                    <th>Actions</th>
+                </tr>
+                </thead>
+                    <tbody>
+                        <!-- Products will be dynamically added here -->
+                    </tbody>
+                </table>
+        </section>
+    <main class = "centered-content">
+        <h1>Hills Dog Food</h1>
+            <img src="images/Hills.jpg" alt="hills" class="product-image" />
+            <section class="shop">
+                <h2>Shop Our Products</h2>
+                <div class="product-grid">
+                    <!-- Product Card -->
+                    <div class="product-card">
+                        <img src="images/product1.jpg" alt="Dog Food">
+                        <h3>Cat Food</h3>
+                        <p>Price: $25.00</p>
+                        <label for="weight">Weight</label>
+                        <select id="size">
+                        <option value="small">1 kg</option>
+                        <option value="medium">3 kg</option>
+                        <option value="large">6 kg</option>
+                        <option value="xlarge">12 kg</option>
+                        <option value="xxlarge">20 kg</option>
+                        </select>
+                    </div>
+                    <button onclick="addToCart('Royal Canin Dog Food', 25)">Add to Cart</button>
+                </div>
+                 <div class="cart">
+                    <h3>Your Cart</h3>
+                    <ul id="cart-items"></ul>
+                    <p>Total: R <span id="cart-total">0</span></p>
+                </div>
+            </section>
+        </main>
+        <footer class="site-footer">
+            <p>&copy; 2025 Womderboom Animal Clinic. All rights reserved.</p>       
+        </footer>
+    </body>
+</html>
