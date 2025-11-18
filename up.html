@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <title>Ultra Pet</title>
+        <link rel="stylesheet" href="home.css" />
+        <link rel="stylesheet" href="dogfood.css" />
+        <link rel="stylesheet" href="rc.css"
+        <script src="tab.js"></script>
+    </head>
+    <body>
+        <header class="site-header">
+            <img src="images/logo.png" alt="Womderboom Animal Clinic" class="logo" />
+            <nav class="nav-Main">
+                <a href="Home.html">Home</a> |
+                <a href="dogFood.html">Dog Food</a> |
+                <a href="CatFood.html">Cat Food</a> |
+                <a href="Other.html">Other</a> |
+                <button><a href="login.css">login </a></bUtton>
+            </nav>
+            
+        </header>
+        <Main class="top">
+            <div class="tab">
+                <button class="tab-link" onclick="openTab(RC.html)">  <a href="RC.html">Royal Canin</a> | </button> 
+                <button class="tab-link" onclick="openTab(hills.html)"> <a href="hills.html">Hills</a> | </button>
+                <button class="tab-link" onclick="openTab(up.html)"><a href="up.html">Ultra Pet</a> |</button>
+                <button class="tab-link" onclick="openTab(vb.html)"><a href="vb.html">Montego</a> |</button>
+                <button class="tab-link" onclick="openTab(montego.html)"><a href="montego.html">Montego</a> |</button>
+            </div>
+        </Main>
+        <section class="admin-panel">
+            <h2>Admin Dashboard</h2>
+                <form id="add-product-form">
+                    <h3>Add New Product</h3>
+                        <input type="text" id="product-name" placeholder="Product Name" required>
+                        <input type="number" id="product-price" placeholder="Price" required>
+                        <input type="number" id="product-quantity" placeholder="Quantity" required>
+                        <input type="text" id="product-image" placeholder="Image URL">
+                        <button type="submit">Add Product</button>
+                </form>
+            <h3>Manage Products</h3>
+                <table id="admin-product-list">
+                <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                    <th>Actions</th>
+                </tr>
+                </thead>
+                    <tbody>
+                        <!-- Products will be dynamically added here -->
+                    </tbody>
+                </table>
+        </section>
+    <main class = "centered-content">
+        <h1>Ultra Pet Dog Food</h1>
+            <img src="images/up.png" alt="Ultra Pet" class="product-image" />
+            <section class="shop">
+                <h2>Shop Our Products</h2>
+                <div class="product-grid">
+                    <!-- Product Card -->
+                    <div class="product-card">
+                        <img src="images/product1.jpg" alt="Dog Food">
+                        <h3>Dog Food</h3>
+                        <p>Price: $25.00</p>
+                        <label for="weight">Weight</label>
+                        <select id="size">
+                        <option value="small">1 kg</option>
+                        <option value="medium">3 kg</option>
+                        <option value="large">6 kg</option>
+                        <option value="xlarge">12 kg</option>
+                        <option value="xxlarge">20 kg</option>
+                        </select>
+                    </div>
+                    <button onclick="addToCart('Royal Canin Dog Food', 25)">Add to Cart</button>
+                </div>
+                 <div class="cart">
+                    <h3>Your Cart</h3>
+                    <ul id="cart-items"></ul>
+                    <p>Total: R <span id="cart-total">0</span></p>
+                </div>
+            </section>
+    </main>
+
+        
+        <footer class="site-footer">
+            <p>&copy; 2024 Womderboom Animal Clinic. All rights reserved.</p>       
+        </footer>
+    </body>
+</html>
